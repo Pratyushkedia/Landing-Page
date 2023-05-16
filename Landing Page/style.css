@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --purple:#3A1078;
+    --light_blue:#9B5ED4;
+    --gradient:linear-gradient(90deg, var(--purple), var(--light_blue));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background:#f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding:0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    border-radius: .5rem;
+    background:var(--gradient);
+    font-size: 1.7rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.home .fa{
+
+  color: red;
+
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+/* .heading{
+    text-align: center;
+    background:var(--gradient);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding:1rem;
+} */
+
+header{
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    background:#191125;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .img{
+  width: 20%;
+}
+header .logo{
+    font-size: 2rem;
+    color:#fff;
+}
+
+
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color:#fff;
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color:var(--purple);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url(images/home-bg-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .image img{
+    padding-top: 30px;
+    width:45vw;
+    animation: float 6s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.home .content h3{
+    font-size: 5.5rem;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.home .content h3 span{
+    color:var(--light_blue);
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    color:#fff;
+    padding:1rem 0;
+}
